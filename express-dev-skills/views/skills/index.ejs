@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <title>Skills</title>
+</head>
+<body>
+  <h1>Skills</h1>
+  <ol>
+    <% skills.forEach(function(s) { %>
+      <div class="col s12 m7">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="https://lorempixel.com/100/190/nature/6">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h6><%= s.skill %></h6>
+            </div>
+            <div class="card-action">
+              <a href="/skills/<%= s.id %>">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% }); %>        
+
+  </ol>
+</body>
+</html>
