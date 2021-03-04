@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1>Skill #<%= skill.id %></h1>
+    <a href="/skills/<%= skill.id %>/edit">Edit</a>
+
     <h3><%= skill.skill %></h3>
     <h3>Complete: <%= skill.complete? 'Yes' : 'No' %></h3> 
 </body>

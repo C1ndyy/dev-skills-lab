@@ -7,3 +7,51 @@ a {
   color: #00B7FF;
 }
 
+h1{
+  text-align: center;
+}
+
+#add-new-skill{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#skills-container {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+#skills-container>div {
+  width: 300px;
+}
+
+#skills-container>div>div {
+  width: 100%;
+}
+
+.complete-false {
+  background-color: #e57373 ;
+}
+
+.complete-true {
+  background-color: #a5d6a7;
+}  
+
+.card-action {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background:none;
+  border:none;
+  margin:0;
+  padding:0;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+
+
+
+

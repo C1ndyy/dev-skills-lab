@@ -18,6 +18,8 @@ module.exports = {
     getAll,
     getOne,
     create,
+    deleteOne,
+    editOne,
 };
 
 function getAll() {
@@ -33,3 +35,15 @@ function create(skill) {
     skill.complete = false;
     skills.push(skill);
 }
+
+function deleteOne(id) {
+    const idx = skills.findIndex(skill => skill.id === parseInt(id));
+    skills.splice(idx, 1);
+}
+
+function editOne(id,body) {
+    const idx = skills.findIndex(skill => skill.id === parseInt(id));
+    console.log(body.skill)
+    skills[idx].skill = body.skill;
+    ("complete" in body)? skills[idx].complete = true : skills[idx].complete = false;
+}    

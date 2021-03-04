@@ -3,6 +3,9 @@ module.exports = {
     show,
     new: newSkill,
     create,
+    delete: deleteSkill,
+    editForm,
+    edit,
 }
 
 const Skill = require('../models/skills-db')
@@ -24,4 +27,21 @@ function newSkill(req, res) {
 function create(req, res) {
     Skill.create(req.body);
     res.redirect('/skills');
+}
+
+function deleteSkill(req, res) {
+    Skill.deleteOne(req.params.id);
+    res.redirect('/skills')
+}
+
+function editForm(req, res) {
+    res.render('skills/edit', {
+        skill: Skill.getOne(req.params.id)
+    });
+}
+
+function edit(req, res) {
+    Skill.editOne(req.params.id, req.body)
+    res.redirect('/skills')
+
 }
